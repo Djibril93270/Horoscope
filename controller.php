@@ -3,9 +3,11 @@ switch ($action)
 {
     case 'reponse':
 {
-    echo 'Partie a coder';
+    // var dump ($_REQUEST);
+    $liste = $_REQUEST['liste'];
+    include 'reponse.php';
     break;
-}    
+}
 default :
-{include 'views / choix.php';}
+{include 'choix.php';}
 }

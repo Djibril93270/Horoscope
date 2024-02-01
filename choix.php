@@ -4,21 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>horoscope</title>
 </head>
 <body>
-    <form action="model.php" method="post">
-
-    <select nme ="liste">
-        <?php foreach  ($signe as $cle => $valeur):?>
+    <form  method="post" action="index.php?action=reponse">
+     <select name="liste">
+        <?php foreach ($signe as $cle => $valeur) :?>
         <option value ="<?= $cle?>"><?=$cle?></option>
         <?php endforeach ?>
-        <input type ="submit" value = "envoyer">
-        </select>
-
+    </select>
+        <input type="submit" value="envoyer">
     </form>
-
-
-    
 </body>
 </html>
