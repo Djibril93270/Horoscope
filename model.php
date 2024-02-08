@@ -13,3 +13,4 @@ $signe = array (
     'Verseau'=>'Ce travail vous demandera  beaucoup d`ingeniosite ',
     'Poisson'=>'Votre esprit vif et limpide facilite la resolution des problemes',
 );
+$connexion = array ('toto' =>'1234');

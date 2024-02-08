@@ -8,6 +8,20 @@ switch ($action)
     include 'reponse.php';
     break;
 }
+case 'connexion':
+    {
+        $user = $_REQUEST ['user'];
+        $password = $_REQUEST ['password'];
+        foreach ($connexion as $login => $mdp) {
+            if($user == $login)
+            {
+                
+            }
+        }
+         break ;
+       }
 default :
-{include 'choix.php';}
+{
+    include 'connexion.php';
+}
 }
