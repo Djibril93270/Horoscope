@@ -7,6 +7,7 @@
     <title>horoscope</title>
 </head>
 <body>
+    <a href="index.php?action=modifier">Administrer</a>
     <form  method="post" action="index.php?action=reponse">
      <select name="liste">
         <?php foreach ($signe as $cle => $valeur) :?>
