@@ -1,4 +1,6 @@
 <?php
+
+function Signe (){
 $signe = array (
     'Belier '=> 'Vous devez faire les efforts les plus serieux pour acquerir un bon niveau',
     'Taureau'=> 'Une de vos plus grandes qualites est la capacite de saisir les theories',
@@ -12,5 +14,15 @@ $signe = array (
     'Capricorne '=>'Une certaine facilite ne doit pas  vous detourner de l`objectif',
     'Verseau'=>'Ce travail vous demandera  beaucoup d`ingeniosite ',
     'Poisson'=>'Votre esprit vif et limpide facilite la resolution des problemes',
-);
-$connexion = array ('toto' =>'1234');
+);   
+    return $signe;
+}
+
+
+function connexion() {
+    
+    $connexion = array ('toto' =>'1234');
+    
+    return $connexion;
+}
+

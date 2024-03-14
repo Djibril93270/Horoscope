@@ -5,6 +5,7 @@ switch ( $action )
     {
         // var dump ( $_REQUEST );
         $liste = $_REQUEST[ 'liste' ];
+        $horoscope = getLesigne($liste);
         include 'reponse.php';
         break;
     }
@@ -13,17 +14,14 @@ switch ( $action )
         //donnees envoyées par le formulaire
         $user = $_REQUEST [ 'user' ];
         $password = $_REQUEST [ 'password' ];
+        
         //test de le validite du mot de passe
-        $flag = false ;
-        foreach ( $connexion as $login => $mdp ) {
-            if ( $user == $login && $password == $mdp )
-            {
-                $flag = true ;
-            }
-        }
-      
+        $flag =getConnexion($user , $password);
+    
+
         //orienter l'affichage
         if ($flag){
+            $signe = getLesSignes();
             include 'choix.php';
         }else
         { 
@@ -33,6 +31,7 @@ switch ( $action )
        }
        case 'modifier':
         {
+            $signe = getLesSignes();
             include 'administration.php';
             break ;
         }
