@@ -1,5 +1,6 @@
 <?php
 include 'data.php';
+/*
 //verifie si le login et password sont bon 
 function getConnexion($login, $password)
 {
@@ -24,5 +25,8 @@ function getLesigne($choix)
     $signe = signe();
     return $signe[$choix];
 }
-
+*/
+function getDataSignes(){
+    $sql = 
+}
 

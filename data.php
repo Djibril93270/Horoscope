@@ -1,6 +1,6 @@
 <?php
 
-function Signe (){
+ /*function Signe (){
 $signe = array (
     'Belier '=> 'Vous devez faire les efforts les plus serieux pour acquerir un bon niveau',
     'Taureau'=> 'Une de vos plus grandes qualites est la capacite de saisir les theories',
@@ -25,4 +25,38 @@ function connexion() {
     
     return $connexion;
 }
+*/
+function connexion()
+  {
+    $serveur='mysql:host=localhost';
+    $bdd='dbname=horoscope';
+    $user='root';
+    $mdp='';
+    try { 
+        $db = new PDO($serveur.';'.$bdd, $user, $mdp); 
+        $db->query("SET CHARACTER SET utf8");
+         $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO:: FETCH_ASSOC); 
+         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); 
+         return $db; }
+    catch (Exception $e)
+     { 
+        echo 'Impossible de se connecter à la base de donnée';
+         echo $e-›getMessage();
+          die(); 
+     }
+         
+         function executerRequete($sql, $params = null) 
+         { if ($params == null) {
+
+          $resultat = connexion()-> query($sql); // exécution directe 
+          return $resultat; 
+         }
+        }
+          
+        function getConnexion($login,$mdp) {
+
+        $sql="SELECT COUNT(*) AS nb FROM connexion WHERE login='$login' and mdp='$mdp'"; 
+        return executerRequete($sql)-> fetch();
+        } 
+    }
 
